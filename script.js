@@ -3,7 +3,6 @@ var longitude;
 var people;
 var peoples;
 var time = new Date();
-// var cords ={lat: -25.363, lng: 131.044};
 var cords;
 cords ={lat: -25.363, lng: 131.044};
 
@@ -42,7 +41,7 @@ function initMap() {
                     cords.lat = parseFloat(latitude);
                     cords.lng = parseFloat(longitude);
                     marker.setPosition(cords);
-
+                    map.panTo(cords, animate=true);
                     // console.log( "Sample of data:", cords);
                 }
             })
