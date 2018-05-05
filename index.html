@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple markers</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .astonavts {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-bottom: 13px;
+            margin-right: 10px;
+            width: 47%;
+            padding-left: 10px;
+            height: 50px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .people-box{
+            height: 100%;
+            padding: 8px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .TotalAmount{
+            display: flex;
+            width: 250px;
+            height: 50px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        .LocationHeader{
+            color: #000;
+            font-weight: bold;
+        }
+        .LocationBox{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            height: 70px;
+            padding-left: 20px;
+            border-radius: 20px;
+        }
+        .time-box{
+            display: flex ;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        .my_tool{
+            padding: 10px;
+            height: 100%;
+            border: 2px solid black;
+        }
+        .my_box_tool{
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row my_box_tool">
+        <div class="col-md-8">
+            <div class="box">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="col-md-4 my_tool">
+            <div class="time-box">
+
+            </div>
+            <div class="people-box">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script  defer
+        src="https://maps.googleapis.com/maps/api/js?AIzaSyD0vsJUfIurZmHdoqZm7FUpMXpbyJIOenw&callback=initMap">
+</script>
+<script async src="script.js"></script>
+<script async src="moment.js"></script>
+</body>
+</html>
