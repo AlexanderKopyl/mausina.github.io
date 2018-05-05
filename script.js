@@ -3,19 +3,21 @@ var longitude;
 var people;
 var peoples;
 var time = new Date();
-var cords ={lat: -25.363, lng: 131.044};
+// var cords ={lat: -25.363, lng: 131.044};
+var cords;
+cords ={lat: -25.363, lng: 131.044};
 
 
 function initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
+
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 1,
-        center: myLatLng
+        center: cords
     });
 
     var marker = new google.maps.Marker({
-        position: myLatLng,
+        position: cords,
         map: map,
         title: 'Hello World!'
     });
@@ -41,12 +43,6 @@ function initMap() {
                     cords.lng = parseFloat(longitude);
                     marker.setPosition(cords);
 
-                    marker = new google.maps.Marker({
-                        position: cords,
-                        map: map,
-                        title: 'Hello World!'
-                    });
-
                     // console.log( "Sample of data:", cords);
                 }
             })
@@ -63,10 +59,7 @@ function initMap() {
             class: 'Location',
             text: "longitude:" + cords.lng + "," + "latitude:" + cords.lat
         }).appendTo('.LocationBox');
-        map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: cords
-        });
+       
     $.ajax({
         url: "http://api.open-notify.org/astros.json",
         beforeSend: function (xhr) {
