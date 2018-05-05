@@ -59,7 +59,7 @@ function initMap() {
             class: 'Location',
             text: "longitude:" + cords.lng + "," + "latitude:" + cords.lat
         }).appendTo('.LocationBox');
-       
+
     $.ajax({
         url: "http://api.open-notify.org/astros.json",
         beforeSend: function (xhr) {
